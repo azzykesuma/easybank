@@ -12,3 +12,4 @@ mobileNav.addEventListener('click', () => {
         hero.style.opacity = 1;
     }
 })
+

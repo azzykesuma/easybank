@@ -32,6 +32,7 @@ header {
   z-index: 999;
 }
 header #mobileNav {
+  display: block;
   border: none;
   background: none;
   cursor: pointer;
@@ -53,17 +54,32 @@ header .desktopNav ul {
 }
 header .desktopNav li {
   color: #9698a6;
+  padding-bottom: 10px;
+}
+header .desktopNav li:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #31d35c;
 }
 @media screen and (min-width: 1200px) {
   header .desktopNav {
     display: block;
   }
 }
-header button {
+@media screen and (min-width: 1200px) {
+  header {
+    padding-inline: 100px;
+  }
+}
+
+.primary {
   display: none;
 }
+.primary:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 @media screen and (min-width: 1200px) {
-  header button {
+  .primary {
     display: block;
     padding: 10px 30px;
     border-radius: 50px;
@@ -74,9 +90,23 @@ header button {
     font-weight: 700;
   }
 }
+
+.mobilePrimary {
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  background: -webkit-gradient(linear, right top, left top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to left, #31d35c, #2bb7da);
+  color: white;
+  font-weight: 700;
+}
+.mobilePrimary:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 @media screen and (min-width: 1200px) {
-  header {
-    padding-inline: 100px;
+  .mobilePrimary {
+    display: none;
   }
 }
 
@@ -191,6 +221,10 @@ header button {
   color: white;
   font-weight: 700;
 }
+.hero .heroLeft button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 @media screen and (min-width: 1200px) {
   .hero .heroLeft {
     text-align: left;
@@ -214,8 +248,10 @@ header button {
   text-align: center;
   background: #f3f4f6;
 }
-.info p {
-  width: 7 0%;
+@media screen and (min-width: 1200px) {
+  .info p {
+    width: 70%;
+  }
 }
 .info h2 {
   color: #2d314d;
@@ -260,20 +296,40 @@ header button {
   text-align: center;
   background: #fafafa;
 }
+@media screen and (min-width: 1200px) {
+  .article .articleWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+}
 .article h4 {
   font-size: 30px;
   color: #2d314d;
   font-weight: 300;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .article h4 {
+    margin-bottom: 60px;
+  }
+}
 .article .articleItem {
   background: white;
   text-align: left;
   margin-bottom: 15px;
+  border-radius: 5px 5px 0 0;
 }
 .article .articleItem img {
   width: 325px;
   border-radius: 5px 5px 0 0;
+}
+@media screen and (min-width: 1200px) {
+  .article .articleItem img {
+    width: 100%;
+    height: 200px;
+  }
 }
 .article .articleItem .articleContent {
   padding: 20px;
@@ -287,15 +343,54 @@ header button {
   color: #2d314d;
   margin-bottom: 10px;
 }
+.article .articleItem .articleContent h5:hover {
+  color: #9698a6;
+  cursor: pointer;
+}
 .article .articleItem .articleContent p {
   line-height: initial;
   font-size: 13px;
+}
+@media screen and (min-width: 1200px) {
+  .article {
+    padding-top: 60px;
+    padding-inline: 100px;
+    text-align: left;
+    padding-bottom: 60px;
+  }
 }
 
 footer {
   background: #2d314d;
   text-align: center;
   padding: 30px;
+}
+footer .footerWrapper, footer .footerWrapperLast {
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  footer .footerWrapper, footer .footerWrapperLast {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .footerWrapper:last-child, footer .footerWrapperLast:last-child {
+    text-align: left;
+  }
+}
+footer .footerWrapper p, footer .footerWrapperLast p {
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  footer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 100px;
+  }
 }
 footer .socialMediaContainer {
   margin-block: 20px;
@@ -307,6 +402,9 @@ footer .socialMediaContainer {
       -ms-flex-pack: center;
           justify-content: center;
 }
+footer .socialMediaContainer a:hover {
+  cursor: pointer;
+}
 footer ul {
   list-style: none;
   color: white;
@@ -314,8 +412,25 @@ footer ul {
 footer ul li {
   margin-bottom: 10px;
 }
-footer button {
-  margin-block: 20px;
+footer ul li:hover {
+  color: #9698a6;
+}
+@media screen and (min-width: 1200px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-inline: 100px;
+  }
+}
+
+.footerBtn {
   padding: 10px 30px;
   border-radius: 50px;
   border: none;
@@ -323,4 +438,9 @@ footer button {
   background: linear-gradient(to left, #31d35c, #2bb7da);
   color: white;
   font-weight: 700;
+  margin-top: 20px;
+}
+.footerBtn:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }

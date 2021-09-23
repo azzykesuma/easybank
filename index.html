@@ -18,14 +18,21 @@
       <button id="mobileNav"><img id="hamburger" src="./images/icon-hamburger.svg" alt="icon-hamburger"></button>
       <div class="desktopNav">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Blog</li>
-          <li>Career</li>
+          <li class="listDesktop" id="home">Home</li>
+          <li class="listDesktop" id="about">About</li>
+          <li class="listDesktop" id="contact">Contact</li>
+          <li class="listDesktop" id="blog">Blog</li>
+          <li class="listDesktop" id="career">Career</li>
         </ul>
+        <div class="hoverAnimation">
+          <div id="borderHome"></div>
+          <div id="borderAbout"></div>
+          <div id="borderContact"></div>
+          <div id="borderBlog"></div>
+          <div id="borderCareer"></div>
+        </div>
       </div>
-      <button>Request Invite</button>
+      <button class="primary">Request Invite</button>
     </header>
     <div class="mobileNavContainer">
       <ul>
@@ -44,7 +51,7 @@
           Take your financial life online. Your Easybank account will be a one-stop-shop 
           for spending, saving, budgeting, investing, and much more.
         </p>
-        <button>Request Invite</button>
+        <button class="mobilePrimary">Request Invite</button>
       </div>
       <div class="heroRight">
         <img src="./images/image-mockups.png" alt="image-mockups" />
@@ -95,48 +102,50 @@
     <!-- article section -->
     <section class="article">
       <h4>Latest Articles</h4>
-      <div class="articleItem">
-        <img src="./images/image-currency.jpg" alt="image-currency">
-        <div class="articleContent">
-          <p class="author">By Claire Robinson</p>
-          <h5>Receive money in any currency with no fees</h5>
-          <p>
-            The world is getting smaller and we’re becoming more mobile. So why should you be 
-            forced to only receive money in a single …
-          </p>
+      <div class="articleWrapper">
+        <div class="articleItem">
+          <img src="./images/image-currency.jpg" alt="image-currency">
+          <div class="articleContent">
+            <p class="author">By Claire Robinson</p>
+            <h5>Receive money in any currency with no fees</h5>
+            <p>
+              The world is getting smaller and we’re becoming more mobile. So why should you be 
+              forced to only receive money in a single …
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="articleItem">
-        <img src="./images/image-restaurant.jpg" alt="image-restaurant">
-        <div class="articleContent">
-          <p class="author">By Wilson Hutton</p>
-          <h5>Treat yourself without worrying about money</h5>
-          <p>
-            Our simple budgeting feature allows you to separate out your spending and set 
-            realistic limits each month. That means you …
-          </p>
+        <div class="articleItem">
+          <img src="./images/image-restaurant.jpg" alt="image-restaurant">
+          <div class="articleContent">
+            <p class="author">By Wilson Hutton</p>
+            <h5>Treat yourself without worrying about money</h5>
+            <p>
+              Our simple budgeting feature allows you to separate out your spending and set 
+              realistic limits each month. That means you …
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="articleItem">
-        <img src="./images/image-plane.jpg" alt="image-plane">
-        <div class="articleContent">
-          <p class="author">By Wilson Huttonn</p>
-          <h5>Take your Easybank card wherever you go</h5>
-          <p>
-            We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
-            while you’re abroad. We’ll even show you …
-          </p>
+        <div class="articleItem">
+          <img src="./images/image-plane.jpg" alt="image-plane">
+          <div class="articleContent">
+            <p class="author">By Wilson Huttonn</p>
+            <h5>Take your Easybank card wherever you go</h5>
+            <p>
+              We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
+              while you’re abroad. We’ll even show you …
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="articleItem">
-        <img src="./images/image-currency.jpg" alt="image-currency">
-        <div class="articleContent">
-          <p class="author">By Claire Robinson</p>
-          <h5>Our invite-only Beta accounts are now live!</h5>
-          <p>
-            After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
-            It’s easy to request an invite through the site ...
-          </p>
+        <div class="articleItem">
+          <img src="./images/image-currency.jpg" alt="image-currency">
+          <div class="articleContent">
+            <p class="author">By Claire Robinson</p>
+            <h5>Our invite-only Beta accounts are now live!</h5>
+            <p>
+              After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
+              It’s easy to request an invite through the site ...
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -168,8 +177,8 @@
           </ul>
         </div>
       </div>
-      <div class="footerWrapper">
-        <button>Request Invite</button>
+      <div class="footerWrapperLast">
+        <button class="footerBtn">Request Invite</button>
         <p> © Easybank. All Rights Reserved</p>
       </div>
     </footer>
